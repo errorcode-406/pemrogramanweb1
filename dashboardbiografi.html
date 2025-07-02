@@ -84,6 +84,22 @@
       }
     }
 
+    @keyframes fadeInScale {
+      0% {
+        opacity: 0;
+        transform: scale(0.8) translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+
+    .animate {
+      animation: fadeInScale 1s ease forwards;
+      opacity: 0;
+    }
+
     section {
       padding: 4rem 2rem;
       max-width: 1000px;
@@ -202,7 +218,7 @@
     <h1>Fatih Muhammad</h1>
     <div class="running-text-container">
       <div class="running-text">
-       Quality Assurance • Developer • Tech Learner • Future Innovator •
+        Quality Assurance • Developer • Tech Learner • Future Innovator •
       </div>
     </div>
   </header>
@@ -216,7 +232,7 @@
 
     <p>Gue percaya bahwa kombinasi antara pengalaman lapangan, rasa ingin tahu, dan konsistensi belajar bisa jadi kunci buat berkembang lebih jauh di industri teknologi.</p>
 
-    <div class="stats">
+    <div class="stats animate">
       <div class="stat">👨‍💻 QA Product<br>di Jatelindo</div>
       <div class="stat">🎓 Mahasiswa S1 FTI<br>UNPAM</div>
       <div class="stat">🎓 Lulusan S1 FKIP<br>UNS</div>
@@ -231,7 +247,7 @@
   <!-- SERVICES -->
   <section id="services">
     <h2>What I Do</h2>
-    <div class="services">
+    <div class="services animate">
       <div class="service">🌐 Programer</div>
       <div class="service">🎨 UI/UX Design</div>
       <div class="service">📦 Quality Assurance</div>
@@ -242,7 +258,7 @@
   <!-- PORTFOLIO -->
   <section id="portfolio">
     <h2>My Works</h2>
-    <div class="portfolio">
+    <div class="portfolio animate">
       <img src="project1.png" alt="Project 1">
       <img src="project2.png" alt="Project 2">
       <img src="project3.png" alt="Project 3">
