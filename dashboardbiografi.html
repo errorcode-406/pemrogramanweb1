@@ -12,14 +12,13 @@
     }
 
     body {
-  font-family: Arial, sans-serif;
-  color: #fff;
-  line-height: 1.6;
-  scroll-behavior: smooth;
-  background: url('20240803_175936_900.jpg') no-repeat center 20%;
-  background-size: cover;
-}
-
+      font-family: Arial, sans-serif;
+      color: #fff;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      background: url('20240803_175936_900.jpg') no-repeat center 20%;
+      background-size: cover;
+    }
 
     nav {
       position: fixed;
@@ -49,7 +48,6 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      color: white;
       text-align: center;
       text-shadow: 0 0 10px rgba(0,0,0,0.7);
       padding: 2rem;
@@ -57,11 +55,33 @@
 
     header h1 {
       font-size: 3rem;
-      margin-bottom: 1rem;
+      color: #f0f0f0;
     }
 
-    header p {
-      font-size: 1.2rem;
+    .running-text-container {
+      overflow: hidden;
+      width: 100%;
+      white-space: nowrap;
+      box-sizing: border-box;
+      margin-top: 1.5rem;
+    }
+
+    .running-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 12s linear infinite;
+      font-size: 1.5rem;
+      color: #ddd;
+      text-shadow: 0 0 5px #000;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
     }
 
     section {
@@ -144,6 +164,10 @@
       .stat {
         font-size: 1.2rem;
       }
+
+      .running-text {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
@@ -159,12 +183,13 @@
 
   <!-- HERO SECTION -->
   <header>
-  <h1 style="font-size: 3rem; color: #f0f0f0; text-shadow: 0 0 8px #000;">Fatih Muhammad</h1>
-  <marquee behavior="scroll" direction="left" scrollamount="6" style="font-size: 1.5rem; color: #ddd; margin-top: 1rem; text-shadow: 0 0 5px #000;">
-    Web Developer • Tech Learner • Future Innovator
-  </marquee>
-</header>
-
+    <h1>Fatih Muhammad</h1>
+    <div class="running-text-container">
+      <div class="running-text">
+        Web Developer • Tech Learner • Future Innovator •
+      </div>
+    </div>
+  </header>
 
   <!-- ABOUT ME -->
   <section id="about">
