@@ -110,6 +110,7 @@
     .slide-left.visible {
       animation: slideInLeft 0.8s ease-out;
     }
+
     @keyframes slideInLeft {
       from {
         opacity: 0;
@@ -124,6 +125,7 @@
     .slide-up.visible {
       animation: slideInUp 0.8s ease-out;
     }
+
     @keyframes slideInUp {
       from {
         opacity: 0;
@@ -246,21 +248,12 @@
     <a href="#contact">Contact</a>
   </nav>
 
+  <!-- HERO SECTION -->
   <header>
     <h1>Fatih Muhammad</h1>
     <div class="running-text-container">
       <div class="running-text">
         Quality Assurance • Developer • Tech Learner • Future Innovator •
-      </div>
-    </div>
-  </header>
-
-  <section id="about">
-      <header>
-    <h1>Fatih Muhammad</h1>
-    <div class="running-text-container">
-      <div class="running-text">
-       Quality Assurance • Developer • Tech Learner • Future Innovator •
       </div>
     </div>
   </header>
@@ -286,6 +279,7 @@
     </div>
   </section>
 
+  <!-- SERVICES -->
   <section id="services">
     <h2>What I Do</h2>
     <div class="services animate hidden">
@@ -296,6 +290,7 @@
     </div>
   </section>
 
+  <!-- PORTFOLIO -->
   <section id="portfolio">
     <h2>My Works</h2>
     <div class="portfolio animate hidden">
@@ -305,15 +300,17 @@
     </div>
   </section>
 
+  <!-- TESTIMONIALS -->
   <section class="testimonials animate hidden slide-left">
     <h2>Testimonials</h2>
     <div class="testimonial">“Fatih sangat komunikatif dan hasil kerjanya rapi.” – Klien A</div>
     <div class="testimonial">“Website saya jadi live hanya dalam 1 hari. Terbaik!” – Klien B</div>
   </section>
 
+  <!-- CONTACT -->
   <section id="contact" class="animate hidden slide-up">
     <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:fatih@example.com" style="color:#ccc;">fatih@jatelindo.co.id</a></p>
+    <p>Email: <a href="mailto:fatih@jatelindo.co.id" style="color:#ccc;">fatih@jatelindo.co.id</a></p>
     <p>WhatsApp: <a href="https://wa.me/6281234567890" target="_blank" style="color:#ccc;">+62 858000000000</a></p>
   </section>
 
@@ -321,23 +318,22 @@
     <p>&copy; 2025 Fatih Muhammad • All rights reserved.</p>
   </footer>
 
+  <!-- OBSERVER SCRIPT -->
   <script>
-  const observers = document.querySelectorAll('.animate');
+  const animatedElements = document.querySelectorAll('.animate');
 
-  const options = {
-    threshold: 0.2
-  };
-
-  const observer = new IntersectionObserver((entries, obs) => {
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        entry.target.classList.remove('hidden'); // <=== tambahkan ini!
-        obs.unobserve(entry.target);
+        entry.target.classList.remove('hidden');
+      } else {
+        entry.target.classList.remove('visible');
+        entry.target.classList.add('hidden');
       }
     });
-  }, options);
+  }, { threshold: 0.2 });
 
-  observers.forEach(el => observer.observe(el));
+  animatedElements.forEach(el => observer.observe(el));
 </script>
 
