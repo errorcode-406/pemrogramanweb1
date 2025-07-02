@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard Biografi</title>
+  <title>Fatih Muhammad</title>
   <style>
     * {
       margin: 0;
@@ -12,100 +13,193 @@
 
     body {
       font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
       color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
     }
 
-    .running-text {
-      background-color: #222;
-      color: #fff;
-      padding: 10px 0;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-
-    .running-text p {
-      display: inline-block;
-      padding-left: 100%;
-      animation: scroll-left 15s linear infinite;
-    }
-
-    @keyframes scroll-left {
-      0% {
-        transform: translateX(0%);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
-    }
-
-    header {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      z-index: 999;
     }
 
     nav a {
       color: white;
-      margin: 0 10px;
       text-decoration: none;
+      font-weight: bold;
     }
 
     nav a:hover {
       text-decoration: underline;
     }
 
-    main {
+    header {
+      height: 100vh;
+      background: url('20240803_175936_900.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      text-shadow: 0 0 10px rgba(0,0,0,0.7);
       padding: 2rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
       text-align: center;
     }
 
-    main img {
-  max-width: 900px;
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 2rem 0;
+    }
 
-  
+    .stat {
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .services, .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .service, .portfolio img {
+      background: #f9f9f9;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .portfolio img {
+      width: 100%;
+      height: auto;
+    }
+
+    .testimonials {
+      margin: 3rem 0;
+    }
+
+    .testimonial {
+      margin-bottom: 2rem;
+      font-style: italic;
+      text-align: center;
+    }
+
     footer {
-      background-color: #333;
+      background: #333;
       color: white;
       text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+      padding: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .stat {
+        font-size: 1.2rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Running Text -->
-  <div class="running-text">
-    <p>Selamat datang di website gue! Jangan lupa cek tutorial hosting GitHub di bawah.</p>
-  </div>
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <!-- Header -->
+  <!-- HERO SECTION -->
   <header>
-    <h1>Halo, Gue Fatih!</h1>
-    <nav>
-      <a href="dashboardbiografi.html">Beranda</a>
-      <a href="tutorial.html">Tutorial GitHub</a>
-    </nav>
+    <h1>Fatih Muhammad</h1>
+    <p>Web Developer • Tech Learner • Future Innovator</p>
   </header>
 
-  <!-- Main Content -->
-  <main>
-    <img src="20240803_175936_900.jpg" alt="Foto Gue" />
-    <h2>Tentang Gue</h2>
-    <p>Nama gue Fatih Muhammad. Gue suka ngoding, belajar teknologi baru, dan tertarik di bidang AI & pengembangan web.</p>
-    <p>Website ini gue buat buat belajar sekaligus berbagi tutorial seputar hosting dan web development.</p>
-  </main>
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Gue adalah seorang pengembang web yang suka membangun website sederhana, bersih, dan responsif. Saat ini gue belajar banyak tentang GitHub, web hosting, dan teknologi backend.</p>
+    <div class="stats">
+      <div class="stat">✨ 20+<br>Projects</div>
+      <div class="stat">📅 2 Tahun<br>Pengalaman</div>
+      <div class="stat">⭐ 100%<br>Feedback Positif</div>
+    </div>
+  </section>
 
-  <!-- Footer -->
+  <!-- SERVICES -->
+  <section id="services">
+    <h2>What I Do</h2>
+    <div class="services">
+      <div class="service">🌐 Website Development</div>
+      <div class="service">🎨 UI/UX Design</div>
+      <div class="service">📦 GitHub Hosting</div>
+      <div class="service">🔧 Sistem Informasi PHP</div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <h2>My Works</h2>
+    <div class="portfolio">
+      <img src="project1.jpg" alt="Project 1">
+      <img src="project2.jpg" alt="Project 2">
+      <img src="project3.jpg" alt="Project 3">
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <h2>Testimonials</h2>
+    <div class="testimonial">“Fatih sangat komunikatif dan hasil kerjanya rapi.” – Klien A</div>
+    <div class="testimonial">“Website saya jadi live hanya dalam 1 hari. Terbaik!” – Klien B</div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:fatih@example.com">fatih@example.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/6281234567890" target="_blank">+62 812-3456-7890</a></p>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Fatih Muhammad</p>
+    <p>&copy; 2025 Fatih Muhammad • All rights reserved.</p>
   </footer>
+
 </body>
 </html>
