@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorial Hosting GitHub</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+
+    /* === RUNNING TEXT === */
+    .running-text {
+      background-color: #222;
+      color: #fff;
+      padding: 10px 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .running-text p {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 15s linear infinite;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    /* === HEADER === */
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* === MAIN === */
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    ol {
+      line-height: 1.8;
+      padding-left: 1.5rem;
+    }
+
+    a {
+      color: #0066cc;
+    }
+
+    /* === FOOTER === */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Running Text -->
+  <div class="running-text">
+    <p>Tutorial lengkap cara hosting website HTML di GitHub Pages!</p>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h1>Tutorial Hosting Web di GitHub</h1>
+    <nav>
+      <a href="dashboardbiografi.html">Beranda</a>
+      <a href="tutorial.html">Tutorial GitHub</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h2>Langkah-langkah Hosting Web di GitHub Pages:</h2>
+    <ol>
+      <li>
+        Buka situs <a href="https://github.com" target="_blank">github.com</a> dan login ke akun lo.
+      </li>
+      <li>
+        Klik tombol <strong>New</strong> di halaman repositori, buat repo baru dengan nama:
+        <br><code>pemrogramanweb1</code> atau yang lo suka.
+      </li>
+      <li>
+        Upload file HTML dan gambar lo ke repo itu.
+        <br>(Klik "Add file" → "Upload files")
+      </li>
+      <li>
+        Setelah semua file ke-upload, pergi ke menu <strong>Settings</strong> → bagian <strong>Pages</strong>.
+      </li>
+      <li>
+        Di bagian <strong>"Source"</strong>, pilih:
+        <br><code>Deploy from a branch</code> → branch <code>main</code> → folder <code>/ (root)</code>, lalu klik "Save".
+      </li>
+      <li>
+        GitHub akan kasih URL, misalnya:  
+        <br><code>https://username.github.io/pemrogramanweb1/</code>
+      </li>
+      <li>
+        Tunggu sekitar 1 menit, lalu buka link itu — website lo udah live!
+      </li>
+    </ol>
+    <p>Selamat! 🎉 Lo udah berhasil hosting web lo di GitHub Pages.</p>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Fatih Muhammad</p>
+  </footer>
+</body>
+</html>
