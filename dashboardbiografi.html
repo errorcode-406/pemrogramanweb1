@@ -42,7 +42,7 @@
 
     header {
       height: 100vh;
-  background: url('20240803_175936_900.jpg') center center / contain no-repeat;
+      background: url('20240803_175936_900.jpg') center/cover no-repeat;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -74,6 +74,26 @@
       text-align: center;
     }
 
+    /* === ABOUT SECTION (Hitam & Kontras) === */
+    #about {
+      background-color: #111;
+      color: #e0e0e0;
+    }
+
+    #about h2 {
+      color: #ffffff;
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    }
+
+    #about p {
+      color: #d0d0d0;
+      line-height: 1.8;
+    }
+
+    #about .stat {
+      color: #ffffff;
+    }
+
     .stats {
       display: flex;
       justify-content: space-around;
@@ -82,7 +102,7 @@
     }
 
     .stat {
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: bold;
       text-align: center;
     }
@@ -150,14 +170,19 @@
     <p>Web Developer • Tech Learner • Future Innovator</p>
   </header>
 
-  <!-- ABOUT -->
+  <!-- ABOUT ME -->
   <section id="about">
     <h2>About Me</h2>
-    <p>Gue adalah seorang pengembang web yang suka membangun website sederhana, bersih, dan responsif. Saat ini gue belajar banyak tentang GitHub, web hosting, dan teknologi backend.</p>
+    <p>Halo! Gue Fatih Muhammad, seorang QA Integration Product di PT Jatelindo Perkasa Abadi, perusahaan yang bergerak di bidang solusi pembayaran dan teknologi keuangan. Di keseharian, gue bertanggung jawab memastikan sistem integrasi antar-produk berjalan lancar, stabil, dan bebas dari bug sebelum sampai ke user.</p>
+
+    <p>Selain kerja, gue juga aktif menempuh pendidikan S1 di Universitas Pamulang (UNPAM), jurusan Teknik Informatika. Gue punya minat besar di dunia teknologi, terutama pengembangan web, sistem informasi, dan keamanan siber. Buat gue, belajar IT itu bukan cuma tuntutan zaman, tapi juga hobi dan passion.</p>
+
+    <p>Gue percaya bahwa kombinasi antara pengalaman lapangan, rasa ingin tahu, dan konsistensi belajar bisa jadi kunci buat berkembang lebih jauh di industri teknologi.</p>
+
     <div class="stats">
-      <div class="stat">✨ 20+<br>Projects</div>
-      <div class="stat">📅 2 Tahun<br>Pengalaman</div>
-      <div class="stat">⭐ 100%<br>Feedback Positif</div>
+      <div class="stat">👨‍💻 QA Product<br>di Jatelindo</div>
+      <div class="stat">🎓 Mahasiswa<br>UNPAM</div>
+      <div class="stat">💡 Aktif Belajar<br>IT & Web Dev</div>
     </div>
   </section>
 
