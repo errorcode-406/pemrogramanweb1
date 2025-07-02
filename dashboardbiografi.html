@@ -13,9 +13,11 @@
 
     body {
       font-family: Arial, sans-serif;
-      color: #333;
+      color: #fff;
       line-height: 1.6;
       scroll-behavior: smooth;
+      background: url('20240803_175936_900.jpg') no-repeat center center fixed;
+      background-size: cover;
     }
 
     nav {
@@ -41,18 +43,16 @@
     }
 
     header {
-  height: 100vh;
-  background: url('20240803_175936_900.jpg') center center / contain no-repeat;
-  background-color: #000; /* Buat latar belakang gelap kalau ada space kosong */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-  text-shadow: 0 0 10px rgba(0,0,0,0.7);
-  padding: 2rem;
-}
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      text-shadow: 0 0 10px rgba(0,0,0,0.7);
+      padding: 2rem;
+    }
 
     header h1 {
       font-size: 3rem;
@@ -66,33 +66,23 @@
     section {
       padding: 4rem 2rem;
       max-width: 1000px;
-      margin: auto;
+      margin: 3rem auto;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 12px;
     }
 
     h2 {
       margin-bottom: 1.5rem;
       font-size: 2rem;
       text-align: center;
-    }
-
-    /* === ABOUT SECTION (Hitam & Kontras) === */
-    #about {
-      background-color: #111;
-      color: #e0e0e0;
-    }
-
-    #about h2 {
       color: #ffffff;
       text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
     }
 
-    #about p {
-      color: #d0d0d0;
-      line-height: 1.8;
-    }
-
-    #about .stat {
-      color: #ffffff;
+    #about p,
+    .testimonial,
+    .service {
+      color: #e0e0e0;
     }
 
     .stats {
@@ -106,6 +96,7 @@
       font-size: 1.5rem;
       font-weight: bold;
       text-align: center;
+      color: #ffffff;
     }
 
     .services, .portfolio {
@@ -116,7 +107,7 @@
     }
 
     .service, .portfolio img {
-      background: #f9f9f9;
+      background: #222;
       padding: 1rem;
       border-radius: 8px;
       text-align: center;
@@ -138,7 +129,7 @@
     }
 
     footer {
-      background: #333;
+      background: rgba(0, 0, 0, 0.9);
       color: white;
       text-align: center;
       padding: 2rem;
@@ -218,8 +209,8 @@
   <!-- CONTACT -->
   <section id="contact">
     <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:fatih@example.com">fatih@example.com</a></p>
-    <p>WhatsApp: <a href="https://wa.me/6281234567890" target="_blank">+62 812-3456-7890</a></p>
+    <p>Email: <a href="mailto:fatih@example.com" style="color:#ccc;">fatih@example.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/6281234567890" target="_blank" style="color:#ccc;">+62 812-3456-7890</a></p>
   </section>
 
   <!-- FOOTER -->
