@@ -84,20 +84,55 @@
       }
     }
 
+    .hidden {
+      opacity: 0;
+    }
+
+    .animate.visible {
+      animation-fill-mode: forwards;
+    }
+
+    .animate:not(.slide-left):not(.slide-up).visible {
+      animation: fadeInScale 0.8s ease-out;
+    }
+
     @keyframes fadeInScale {
-      0% {
+      from {
         opacity: 0;
-        transform: scale(0.8) translateY(20px);
+        transform: scale(0.9) translateY(30px);
       }
-      100% {
+      to {
         opacity: 1;
         transform: scale(1) translateY(0);
       }
     }
 
-    .animate {
-      animation: fadeInScale 1s ease forwards;
-      opacity: 0;
+    .slide-left.visible {
+      animation: slideInLeft 0.8s ease-out;
+    }
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-80px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .slide-up.visible {
+      animation: slideInUp 0.8s ease-out;
+    }
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     section {
@@ -204,8 +239,6 @@
   </style>
 </head>
 <body>
-
-  <!-- NAVIGATION -->
   <nav>
     <a href="#about">About</a>
     <a href="#services">Services</a>
@@ -213,12 +246,21 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- HERO SECTION -->
   <header>
     <h1>Fatih Muhammad</h1>
     <div class="running-text-container">
       <div class="running-text">
         Quality Assurance • Developer • Tech Learner • Future Innovator •
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+      <header>
+    <h1>Fatih Muhammad</h1>
+    <div class="running-text-container">
+      <div class="running-text">
+       Quality Assurance • Developer • Tech Learner • Future Innovator •
       </div>
     </div>
   </header>
@@ -232,7 +274,7 @@
 
     <p>Gue percaya bahwa kombinasi antara pengalaman lapangan, rasa ingin tahu, dan konsistensi belajar bisa jadi kunci buat berkembang lebih jauh di industri teknologi.</p>
 
-    <div class="stats animate">
+    <div class="stats">
       <div class="stat">👨‍💻 QA Product<br>di Jatelindo</div>
       <div class="stat">🎓 Mahasiswa S1 FTI<br>UNPAM</div>
       <div class="stat">🎓 Lulusan S1 FKIP<br>UNS</div>
@@ -244,45 +286,53 @@
     </div>
   </section>
 
-  <!-- SERVICES -->
   <section id="services">
     <h2>What I Do</h2>
-    <div class="services animate">
+    <div class="services animate hidden">
       <div class="service">🌐 Programer</div>
       <div class="service">🎨 UI/UX Design</div>
       <div class="service">📦 Quality Assurance</div>
-      <div class="service">🔧 Product Development </div>
+      <div class="service">🔧 Product Development</div>
     </div>
   </section>
 
-  <!-- PORTFOLIO -->
   <section id="portfolio">
     <h2>My Works</h2>
-    <div class="portfolio animate">
+    <div class="portfolio animate hidden">
       <img src="project1.png" alt="Project 1">
       <img src="project2.png" alt="Project 2">
       <img src="project3.png" alt="Project 3">
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="testimonials">
+  <section class="testimonials animate hidden slide-left">
     <h2>Testimonials</h2>
     <div class="testimonial">“Fatih sangat komunikatif dan hasil kerjanya rapi.” – Klien A</div>
     <div class="testimonial">“Website saya jadi live hanya dalam 1 hari. Terbaik!” – Klien B</div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
+  <section id="contact" class="animate hidden slide-up">
     <h2>Contact Me</h2>
     <p>Email: <a href="mailto:fatih@example.com" style="color:#ccc;">fatih@jatelindo.co.id</a></p>
     <p>WhatsApp: <a href="https://wa.me/6281234567890" target="_blank" style="color:#ccc;">+62 858000000000</a></p>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Fatih Muhammad • All rights reserved.</p>
   </footer>
 
+  <script>
+    const observers = document.querySelectorAll('.animate');
+    const options = { threshold: 0.2 };
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, options);
+    observers.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
